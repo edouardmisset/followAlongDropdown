@@ -14,11 +14,12 @@ navItems.forEach((element) =>
 // The main function to display the dropdown
 function handleEnter() {
   this.classList.add("trigger-enter");
-  setTimeout(() => {
-    if (this.classList.contains("trigger-enter")) {
-      this.classList.add("trigger-enter-active");
-    }
-  }, 150);
+  setTimeout(
+    () =>
+      this.classList.contains("trigger-enter") &&
+      this.classList.add("trigger-enter-active"),
+    150
+  );
   background.classList.add("open");
 
   const dropdown = this.querySelector(".dropdown");
